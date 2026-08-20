@@ -1,7 +1,7 @@
 import React, { use } from 'react';
 import Cart from '../Cart/Cart';
 
-const TicketCart = ({ customersPromise }) => {
+const TicketCart = ({ customersPromise, clickCart, setClickCart }) => {
     const customersData = use(customersPromise);
 
     return (
@@ -23,7 +23,7 @@ const TicketCart = ({ customersPromise }) => {
 
                             {/*  Card 1  */}
                             {
-                                customersData.map(customer => <Cart customer={customer}></Cart>)
+                                customersData.map(customer => <Cart customer={customer} clickCart={clickCart}setClickCart={setClickCart}></Cart>)
                             }
 
                         </div>
