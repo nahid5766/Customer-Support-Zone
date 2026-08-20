@@ -17,7 +17,7 @@ const Navbar = ({ taskSatusList = [], resolvedList = [] }) => {
                         <a href="#" className='text-black'>Download</a>
                         <a href="#" className='text-black'>Contact</a>
 
-                        <button className='bg-gradient-to-r from-[#632EE3] to-[#9F62F2] px-6 py-2 rounded-sm text-white'>+ New Ticket</button>
+                        <button className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] px-6 py-2 rounded-sm text-white'>+ New Ticket</button>
                     </div>
                 </nav>
             </div>
@@ -26,7 +26,7 @@ const Navbar = ({ taskSatusList = [], resolvedList = [] }) => {
             <div className="max-w-7xl mx-auto pt-10 grid grid-cols-1 md:grid-cols-2 gap-6 w-full p-4 pb-10">
 
                 {/* In-Progress Card */}
-                <div className="relative overflow-hidden rounded-xl bg-gradient-to-tr from-[#632EE3] via-[#8B40E2] to-[#9F62F2] p-8 text-white shadow-lg flex flex-col items-center justify-center min-h-48">
+                <div className="relative overflow-hidden rounded-xl bg-linear-to-tr from-[#632EE3] via-[#8B40E2] to-[#9F62F2] p-8 text-white shadow-lg flex flex-col items-center justify-center min-h-48">
                     <img src={img2} alt="" className="absolute top-0 left-0 h-full w-auto object-cover opacity-100 pointer-events-none mix-blend-overlay" />
                     <img src={img2} alt="" className="absolute top-0 right-0 h-full w-auto object-cover opacity-100 pointer-events-none mix-blend-overlay -scale-x-100" />
 
@@ -38,7 +38,7 @@ const Navbar = ({ taskSatusList = [], resolvedList = [] }) => {
                 </div>
 
                 {/* Resolved Card */}
-                <div className="relative overflow-hidden rounded-xl bg-gradient-to-tr from-[#54CF68] via-[#21B573] to-[#00827A] p-8 text-white shadow-lg flex flex-col items-center justify-center min-h-48">
+                <div className="relative overflow-hidden rounded-xl bg-linear-to-tr from-[#54CF68] via-[#21B573] to-[#00827A] p-8 text-white shadow-lg flex flex-col items-center justify-center min-h-48">
                     <img src={img2} alt="" className="absolute top-0 left-0 h-full w-auto object-cover opacity-100 pointer-events-none mix-blend-overlay" />
                     <img src={img2} alt="" className="absolute top-0 right-0 h-full w-auto object-cover opacity-100 pointer-events-none mix-blend-overlay -scale-x-100" />
 

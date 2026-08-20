@@ -4,6 +4,8 @@ import Navbar from './components/Navbar/Navbar';
 import TicketCart from './components/TicketCart/TicketCart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footers from './components/Footer/Footers';
+
 
 const fetchCustomers = async () => {
   const res = await fetch('./customers.json');
@@ -31,8 +33,10 @@ function App() {
         setResolvedList={setResolvedList}
       />
 
-      <ToastContainer position="top-right" autoClose={1000} />    
-      </>
+      <Footers/>
+      <ToastContainer position="top-right" autoClose={1000} />
+
+    </>
   );
 }
 
