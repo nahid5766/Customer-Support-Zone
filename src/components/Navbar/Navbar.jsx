@@ -1,7 +1,7 @@
 import React from 'react';
 import img2 from '../../assets/vector1.png';
 
-const Navbar = () => {
+const Navbar = ({ inProgressCount }) => {
     return (
         <div className='bg-gray-100'>
             {/* Navbar here */}
@@ -44,7 +44,7 @@ const Navbar = () => {
                     {/*  Card Content  */}
                     <div className="relative z-10 flex flex-col items-center gap-2">
                         <span className="text-xl font-medium tracking-wide text-white/90">In-Progress</span>
-                        <span className="text-6xl font-semibold tracking-tight">0</span>
+                        <span className="text-6xl font-semibold tracking-tight">{inProgressCount}</span>
                     </div>
                 </div>
 

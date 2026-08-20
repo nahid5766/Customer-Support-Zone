@@ -1,15 +1,22 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const Cart = ({ customer, clickCart, setClickCart }) => {
+const Cart = ({ customer, taskSatusList, setTaskSatusList }) => {
     const isOpen = customer.status === 'Open';
 
-    handleClicks = () => {
-        setClickCart(customer)
+    const handleCartClick = (ticket) => {
+        const exists = taskSatusList.filter(tit => tit.id !== ticket.id)
+        setTaskSatusList(exists)
 
+        if(exists){
+            toast("In Progress!")
+        }
+        setTaskSatusList(ticket => ticket + 1)
     }
 
+
     return (
-        <div onClick={() => handleClicks()} className="bg-white rounded-lg p-5 shadow-sm border border-slate-100 flex flex-col justify-between gap-4">
+        <div onClick={() => handleCartClick(customer)} className="bg-white rounded-lg p-5 shadow-sm border border-slate-100 flex flex-col justify-between gap-4">
             <div className="flex items-start justify-between gap-2">
                 <h3 className="font-semibold text-slate-900 text-base leading-snug">{customer.title}
                 </h3>

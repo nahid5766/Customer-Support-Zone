@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import TicketCart from './components/TicketCart/TicketCart';
+import { ToastContainer, toast } from 'react-toastify';
 
 const fetchCustomers = async () => {
   const res = await fetch('./customers.json')
@@ -12,14 +13,15 @@ const customersPromise = fetchCustomers();
 
 
 function App() {
-
-  const [countClick, setCountClick] = useState(0)
+const [taskSatusList, setTaskSatusList] = useState([]);
+const inProgressCount = taskSatusList.length;
 
 
   return (
     <>
-      <Navbar></Navbar>
-      <TicketCart customersPromise={customersPromise} clickCart={clickCart} setClickCart={setClickCart}></TicketCart>
+      <Navbar inProgressCount={inProgressCount}></Navbar>
+      <TicketCart customersPromise={customersPromise} taskSatusList={taskSatusList} setTaskSatusList={setTaskSatusList}></TicketCart>
+      <ToastContainer />
     </>
   )
 }
