@@ -13,6 +13,8 @@ const Cart = ({ customer, taskSatusList, setTaskSatusList }) => {
             return;
         }
         setTaskSatusList(prevList => [...prevList, ticket]);
+
+        toast.success("In-Progress!");
     }
 
 

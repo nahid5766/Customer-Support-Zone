@@ -1,5 +1,6 @@
 import React, { use } from 'react';
 import Cart from '../Cart/Cart';
+import { toast } from 'react-toastify';
 
 const TicketCart = ({
     customersPromise,
@@ -9,12 +10,18 @@ const TicketCart = ({
     setResolvedList
 }) => {
     const customersData = use(customersPromise);
- 
+
     const handleComplete = (task) => {
         // Task Status remove
         setTaskSatusList((prev) => prev.filter((item) => item.id !== task.id));
         // Resolved add
         setResolvedList((prev) => [...prev, task]);
+        
+    };
+
+    const handleRemoveResolved = (id) => {
+        setResolvedList((prev) => prev.filter((item) => item.id !== id));
+        toast.success("Removed!");
     };
 
     return (
@@ -77,12 +84,26 @@ const TicketCart = ({
                         {resolvedList?.length === 0 ? (
                             <p className="text-sm text-slate-500">No resolved tasks yet.</p>
                         ) : (
-                            <div className="space-y-2">
+                            <div className="space-y-3">
                                 {resolvedList?.map((res) => (
-                                    <div key={res.id} className="p-2 bg-emerald-50 text-black text-xs font-medium rounded border border-emerald-200">
+                                    <div key={res.id} className="p-3 bg-emerald-50 text-black text-xs font-bold rounded border border-emerald-200 ml-0">
                                         {res.title}
+
+                                        <div className='flex justify-between items-center mt-3'>
+                                            <div className='flex gap-1 text-green-500'>
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-4">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                                                </svg>
+                                                <span>Completed</span>
+                                            </div>
+                                            <div className='text-gray-500/60'>
+                                                <button onClick={() => handleRemoveResolved(res.id)}>Click to remove</button>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 ))}
+
                             </div>
                         )}
                     </div>

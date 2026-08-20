@@ -18,21 +18,21 @@ function App() {
 
   return (
     <>
-      <Navbar 
-        taskSatusList={taskSatusList} 
-        resolvedList={resolvedList} 
+      <Navbar
+        taskSatusList={taskSatusList}
+        resolvedList={resolvedList}
       />
 
-      <TicketCart 
-        customersPromise={customersPromise} 
-        taskSatusList={taskSatusList} 
+      <TicketCart
+        customersPromise={customersPromise}
+        taskSatusList={taskSatusList}
         setTaskSatusList={setTaskSatusList}
         resolvedList={resolvedList}
         setResolvedList={setResolvedList}
       />
 
-      <ToastContainer position="top-right" autoClose={1000} />
-    </>
+      <ToastContainer position="top-right" autoClose={1000} />    
+      </>
   );
 }
 
