@@ -8,15 +8,16 @@ const Cart = ({ customer, taskSatusList, setTaskSatusList }) => {
         const exists = taskSatusList.filter(tit => tit.id !== ticket.id)
         setTaskSatusList(exists)
 
-        if(exists){
+        if (exists) {
             toast("In Progress!")
         }
-        setTaskSatusList(ticket => ticket + 1)
+        setTaskSatusList(...customer, ticket);
     }
 
 
     return (
         <div onClick={() => handleCartClick(customer)} className="bg-white rounded-lg p-5 shadow-sm border border-slate-100 flex flex-col justify-between gap-4">
+            
             <div className="flex items-start justify-between gap-2">
                 <h3 className="font-semibold text-slate-900 text-base leading-snug">{customer.title}
                 </h3>

@@ -13,13 +13,14 @@ const customersPromise = fetchCustomers();
 
 
 function App() {
-const [taskSatusList, setTaskSatusList] = useState([]);
-const inProgressCount = taskSatusList.length;
+  const [taskSatusList, setTaskSatusList] = useState([]);
+  console.log(taskSatusList);
+
 
 
   return (
     <>
-      <Navbar inProgressCount={inProgressCount}></Navbar>
+      <Navbar></Navbar>
       <TicketCart customersPromise={customersPromise} taskSatusList={taskSatusList} setTaskSatusList={setTaskSatusList}></TicketCart>
       <ToastContainer />
     </>
