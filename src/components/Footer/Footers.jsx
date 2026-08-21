@@ -5,9 +5,9 @@ const Footers = () => {
     return (
         <div className='bg-black'>
 
-            <div className='max-w-7xl mx-auto text-white flex flex-col md:flex-row justify-between items-start py-15 gap-10'>
+            <div className='max-w-7xl mx-auto text-white flex flex-col items-center md:flex-row justify-between py-15 gap-10'>
 
-                <div className='max-w-xs space-y-4'>
+                <div className='max-w-xs space-y-4 text-center'>
                     <h2 className='font-semibold text-lg'>CS — Ticket System</h2>
                     <p className='space-y-3 text-sm leading-relaxed'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </div>

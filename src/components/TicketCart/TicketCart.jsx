@@ -26,7 +26,7 @@ const TicketCart = ({
 
     return (
         <div className="min-h-screen p-3 md:p-6 font-sans text-gray-800 bg-gray-100">
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5 max-w-7xl mx-auto mb-13">
 
                 {/* LEFT SECTION */}
                 <div className="lg:col-span-3 space-y-4">
