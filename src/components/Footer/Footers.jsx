@@ -74,7 +74,7 @@ const Footers = () => {
             {/* strate line */}
             <hr className="max-w-7xl mx-auto border-t border-gray-400/40 w-full" />
 
-            <div className='text-center text-white mt-5 mb-8 p-5'>
+            <div className='text-center text-white p-5'>
                 <p>© 2025 CS — Ticket System. All rights reserved.</p>
             </div>
         </div>);
